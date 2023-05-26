@@ -19,8 +19,6 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../client/build')));
 }
 
-app.use(routes);
-
 const startServer = async  (typeDefs, resolvers) => {
   await server.start()
   server.applyMiddleware({app})
